@@ -27,20 +27,23 @@ public class SpringConfig
 //		return employee;
 //	}
 
-	/*
-	 * @Bean("emp2") public Employee employee(Address address) {
-	 * com.amazon.di.setter.emp.Employee employee = new Employee(120000,
-	 * "Md Sultan Anwar");
-	 * 
-	 * employee.setAddress(address); // Optional return employee; }
-	 */
+	
+	  @Bean("emp2") public Employee employee(Address address) {
+	  com.amazon.di.setter.emp.Employee employee = new Employee(120000,
+	  "Md Sultan Anwar");
+	  
+	  employee.setAddress(address); // Optional return employee; 
+	  return employee;
+	  }
+	 
 
-	@Bean("emp2")
+	/*@Bean("emp2")
 	public Employee employee(Address address)
 	{
 		com.amazon.di.setter.emp.Employee employee = new Employee(120000, "Md Sultan Anwar");
 
 		return employee;
-	}
+	}*/
 
 }
+

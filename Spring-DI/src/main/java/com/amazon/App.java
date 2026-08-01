@@ -10,10 +10,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         
        com.amazon.di.setter.emp.Employee e1 =  (com.amazon.di.setter.emp.Employee) context.getBean("emp2");
        
        e1.printInfo();
+       context.close();
+       
     }
 }
